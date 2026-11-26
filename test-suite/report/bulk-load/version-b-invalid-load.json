@@ -1,0 +1,13 @@
+{
+  "inputCount": 1,
+  "insertedCount": 0,
+  "duplicateCount": 0,
+  "rejectedCount": 1,
+  "errors": [
+    {
+      "transactionId": "null",
+      "reason": "transactionId, valueDate and amount are required"
+    }
+  ],
+  "httpStatus": 200
+}

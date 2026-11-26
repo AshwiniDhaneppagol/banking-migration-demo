@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bulk Load Comparison Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 35px;
+            background: #f5f7fa;
+            color: #263238;
+        }
+        h1, h2 { color: #17365d; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background: #17365d;
+            color: white;
+        }
+        .pass {
+            color: green;
+            font-weight: bold;
+        }
+        .note {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Bulk Load Comparison Report</h1>
+
+<p><strong>Project:</strong> YaazhTech Software Solutions UG</p>
+<p><strong>Test Type:</strong> Banking Transaction Bulk Load</p>
+<p><strong>Dataset:</strong> 10 Synthetic Banking Transactions</p>
+<p><strong>Execution Date:</strong> 25 November 2026</p>
+
+<h2>1. Bulk Load Results</h2>
+
+<table>
+    <tr>
+        <th>Metric</th>
+        <th>Version A</th>
+        <th>Version B</th>
+    </tr>
+    <tr>
+        <td>Input Count</td>
+        <td>10</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>Inserted Count</td>
+        <td>5</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>Duplicate Count</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>Rejected Count</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>Errors</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+</table>
+
+<h2>2. Invalid Transaction Validation</h2>
+
+<p>Both applications were tested with one transaction missing its transactionId.</p>
+
+<table>
+    <tr>
+        <th>Metric</th>
+        <th>Version A</th>
+        <th>Version B</th>
+    </tr>
+    <tr>
+        <td>Input Count</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Inserted Count</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>Duplicate Count</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>Rejected Count</td>
+        <td>1</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>HTTP Status</td>
+        <td>200 OK</td>
+        <td>200 OK</td>
+    </tr>
+</table>
+
+<h3>Validation Error</h3>
+<p>Both applications returned the following error:</p>
+
+<pre>transactionId, valueDate and amount are required</pre>
+
+<p class="pass">Result: PASS - Both applications correctly rejected the invalid transaction.</p>
+
+<h2>2. Test Outcome</h2>
+
+<p class="pass">Version A: PASS - All 10 input records processed without rejection.</p>
+<p class="pass">Version B: PASS - All 10 input records processed without rejection.</p>
+
+<h2>3. Observations</h2>
+
+<div class="note">
+    <p>Both applications processed all 10 input transactions successfully.</p>
+    <p>Version A inserted 5 new records and identified 5 duplicates.</p>
+    <p>Version B inserted 4 new records and identified 6 duplicates.</p>
+    <p>The difference is consistent with the intentional deletion of TXN003 and addition of TXN006 in Version B before
+        this bulk-load execution.</p>
+    <p>No records were rejected and no errors were reported by either application.</p>
+</div>
+
+<h2>4. Conclusion</h2>
+
+<p>Both applications accepted the bulk-load request without errors. However, their existing data differed, resulting in
+    different inserted and duplicate counts. This is an important finding for migration data validation.</p>
+
+</body>
+</html>

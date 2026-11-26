@@ -1,0 +1,12 @@
+[
+ {"transactionId":"TXN001","accountId":"ACC001","valueDate":"2026-11-12","bookingDate":"2026-11-12","currency":"EUR","amount":100.00,"debitCreditIndicator":"CREDIT","transactionType":"TRANSFER","description":"Salary payment","status":"BOOKED"},
+ {"transactionId":"TXN002","accountId":"ACC002","valueDate":"2026-11-12","bookingDate":"2026-11-12","currency":"EUR","amount":-25.50,"debitCreditIndicator":"DEBIT","transactionType":"CARD_PAYMENT","description":"Grocery store","status":"BOOKED"},
+ {"transactionId":"TXN003","accountId":"ACC001","valueDate":"2026-11-12","bookingDate":"2026-11-11","currency":"USD","amount":250.75,"debitCreditIndicator":"CREDIT","transactionType":"INTEREST","description":null,"status":"BOOKED"},
+ {"transactionId":"TXN004","accountId":"ACC003","valueDate":"2026-11-12","bookingDate":"2026-11-12","currency":"GBP","amount":-10.00,"debitCreditIndicator":"DEBIT","transactionType":"FEE","description":"Monthly fee","status":"BOOKED"},
+ {"transactionId":"TXN005","accountId":"ACC004","valueDate":"2026-11-12","bookingDate":"2026-11-12","currency":"EUR","amount":500.00,"debitCreditIndicator":"CREDIT","transactionType":"TRANSFER","description":"Incoming transfer","status":"PENDING"},
+ {"transactionId":"TXN006","accountId":"ACC002","valueDate":"2026-11-13","bookingDate":"2026-11-13","currency":"EUR","amount":75.25,"debitCreditIndicator":"CREDIT","transactionType":"REFUND","description":"Card refund","status":"BOOKED"},
+ {"transactionId":"TXN007","accountId":"ACC005","valueDate":"2026-11-13","bookingDate":"2026-11-13","currency":"CHF","amount":-42.10,"debitCreditIndicator":"DEBIT","transactionType":"CARD_PAYMENT","description":"Transport","status":"BOOKED"},
+ {"transactionId":"TXN008","accountId":"ACC003","valueDate":"2026-11-13","bookingDate":"2026-11-12","currency":"EUR","amount":1200.00,"debitCreditIndicator":"CREDIT","transactionType":"TRANSFER","description":"Invoice settlement","status":"BOOKED"},
+ {"transactionId":"TXN009","accountId":"ACC006","valueDate":"2026-11-14","bookingDate":"2026-11-14","currency":"EUR","amount":-5.99,"debitCreditIndicator":"DEBIT","transactionType":"FEE","description":"Service fee","status":"REJECTED"},
+ {"transactionId":"TXN010","accountId":"ACC001","valueDate":"2026-11-14","bookingDate":"2026-11-14","currency":"USD","amount":999.99,"debitCreditIndicator":"CREDIT","transactionType":"TRANSFER","description":"International transfer","status":"BOOKED"}
+]
